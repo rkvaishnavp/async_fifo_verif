@@ -1,6 +1,6 @@
 class rd_monitor extends uvm_monitor;
 
-  `uvm_component_utils(rd_monitor);
+  `uvm_component_utils(rd_monitor)
 
   virtual rd_if vif;
 
@@ -10,7 +10,7 @@ class rd_monitor extends uvm_monitor;
 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    if (!uvm_config_db#(virtual rd_if)::get(this, "", "vif", vif)) begin
+    if (!uvm_config_db#(virtual rd_if)::get(this, "", "rd_vif", vif)) begin
       `uvm_fatal(get_type_name(), "Virtual interface must be set for monitor")
     end
   endfunction

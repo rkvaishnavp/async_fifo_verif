@@ -1,6 +1,7 @@
 class rd_agent extends uvm_agent;
 
-  `uvm_component_utils(rd_agent);
+  `uvm_component_utils(rd_agent)
+
   rd_driver driver;
   rd_monitor monitor;
   rd_sqr sqr;
